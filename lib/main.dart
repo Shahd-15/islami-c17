@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:islami_c17/ui/hadeht_details/screen/hadeth_details_screen.dart';
 import 'package:islami_c17/ui/home/screen/home_screen.dart';
 
 void main() {
@@ -14,8 +15,10 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Flutter Demo',
       initialRoute: HomeScreen.routeName,
+      debugShowCheckedModeBanner: false,
       routes: {
-        HomeScreen.routeName:(_)=>HomeScreen()
+        HomeScreen.routeName:(_)=>HomeScreen(),
+        HadethDetailsScreen.routeName:(_)=>HadethDetailsScreen()
       },
     );
   }
