@@ -1,59 +1,65 @@
 import 'package:flutter/material.dart';
-import '../models/onboarding_model.dart';
-import '../core/resources/ColorsManager.dart';
+import 'package:islami_c17/core/resources/ColorsManager.dart';
+import 'package:islami_c17/models/onboarding_model.dart';
 
 class OnboardingPageWidget extends StatelessWidget {
   final OnboardingModel data;
-  final Color textColor;
 
   const OnboardingPageWidget({
     super.key,
-    required this.data,
-    required this.textColor,
+    required this.data, required Color textColor,
   });
 
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 32),
+      padding: const EdgeInsets.symmetric(horizontal: 40),
       child: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          const Spacer(flex: 2),
-
+          // Image
           Expanded(
-            flex: 6,
-            child: Image.asset(
-              data.image,
-              fit: BoxFit.contain,
+            flex: 3,
+            child: Center(
+              child: Image.asset(
+                data.image,
+                fit: BoxFit.contain,
+              ),
             ),
           ),
 
-          const SizedBox(height: 24),
+          const SizedBox(height: 40),
 
+          // Title
           Text(
             data.title,
             textAlign: TextAlign.center,
-            style: TextStyle(
-              color: textColor,
-              fontSize: 22,
+            style: const TextStyle(
+              color: ColorsManager.primaryColor,
+              fontSize: 24,
               fontWeight: FontWeight.bold,
               height: 1.3,
             ),
           ),
 
-          const SizedBox(height: 12),
+          const SizedBox(height: 16),
 
-          Text(
-            data.description,
-            textAlign: TextAlign.center,
-            style: TextStyle(
-              color: textColor.withOpacity(0.85),
-              fontSize: 15,
-              height: 1.5,
+          // Description
+          Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 20),
+            child: Text(
+              data.description,
+              textAlign: TextAlign.center,
+              style: TextStyle(
+                color: ColorsManager.darkGoldColor,
+                fontSize: 16,
+                fontWeight: FontWeight.w400,
+                height: 1.5,
+              ),
             ),
           ),
 
-          const Spacer(flex: 3),
+          const SizedBox(height: 60),
         ],
       ),
     );

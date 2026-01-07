@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import '../../../models/onboarding_model.dart';
-import '../../../widgets/onboarding_page_widget.dart';
+import 'package:islami_c17/models/onboarding_model.dart';
+import 'package:islami_c17/ui/home/widgets/onboarding_page_widget.dart';
 import '../../../core/resources/ColorsManager.dart';
 
 class OnboardingScreen extends StatefulWidget {
