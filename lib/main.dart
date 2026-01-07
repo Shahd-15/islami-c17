@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:islami_c17/ui/home/screen/home_screen.dart';
+import 'package:islami_c17/ui/home/screen/onboarding_screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -13,9 +14,11 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Flutter Demo',
-      initialRoute: HomeScreen.routeName,
+      initialRoute: OnboardingScreen.routeName,
+
       routes: {
-        HomeScreen.routeName:(_)=>HomeScreen()
+        HomeScreen.routeName:(_)=>HomeScreen(),
+        OnboardingScreen.routeName:(_)=>OnboardingScreen()
       },
     );
   }
