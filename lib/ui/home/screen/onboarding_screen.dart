@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:islami_c17/models/onboarding_model.dart';
+import 'package:islami_c17/ui/home/screen/home_screen.dart';
 import 'package:islami_c17/ui/home/widgets/onboarding_page_widget.dart';
 import '../../../core/resources/ColorsManager.dart';
 
@@ -131,13 +132,26 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                     ),
                   )
                       : const SizedBox(width: 40),
+                  _currentPage == _pages.length - 1
+                  ?
+                  GestureDetector(
+                    onTap: (){
+                      Navigator.pushNamed(context, HomeScreen.routeName);
+                    },
+                    child: Text(
+                      'finish',
+                      style: TextStyle(
+                        color: ColorsManager.darkGoldColor,
+                        fontSize: 14,
+                        fontWeight: FontWeight.w600,
+                      ),
+                    ),
+                  ):
 
                   GestureDetector(
                     onTap: _nextPage,
                     child: Text(
-                      _currentPage == _pages.length - 1
-                          ? 'Finish'
-                          : 'Next',
+                          'Next',
                       style: TextStyle(
                         color: ColorsManager.darkGoldColor,
                         fontSize: 14,

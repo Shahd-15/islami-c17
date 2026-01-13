@@ -5,6 +5,11 @@ class QuranTab extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(color: Colors.black,);
+    // TODO: implement build
+    throw UnimplementedError();
   }
-}
+
+
+
+  }
+

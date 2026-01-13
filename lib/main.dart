@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:islami_c17/ui/home/screen/home_screen.dart';
 import 'package:islami_c17/ui/home/screen/onboarding_screen.dart';
+import 'package:islami_c17/ui/home/tabs/sebha_tab/SebhaTab.dart';
 
 void main() {
   runApp(const MyApp());
@@ -19,6 +20,7 @@ class MyApp extends StatelessWidget {
       routes: {
         HomeScreen.routeName:(_)=>HomeScreen(),
         OnboardingScreen.routeName:(_)=>OnboardingScreen()
+
       },
     );
   }
