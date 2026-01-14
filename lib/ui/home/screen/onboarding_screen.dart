@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:islami_c17/core/resources/AssetsManager.dart';
 import 'package:islami_c17/models/onboarding_model.dart';
 import 'package:islami_c17/ui/home/screen/home_screen.dart';
 import 'package:islami_c17/ui/home/widgets/onboarding_page_widget.dart';
@@ -74,8 +75,11 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
       body: SafeArea(
         child: Column(
           children: [
+            Padding(
+                padding: const EdgeInsets.only(bottom: 20,right: 69.5,left: 69.5),
+              child: Image.asset(AssetsManager.islamiHeader),
+            ),
             const SizedBox(height: 20),
-
 
             Expanded(
               child: PageView.builder(

@@ -13,6 +13,8 @@ abstract final class AssetsManager{
   static const String SebhaBody1 = "assets/images/SebhaBody 1.png";
   static const String Maskgroup = "assets/images/Mask group.png";
   static const String sebhaBackground = "assets/images/sebha_background.png";
+  static const String logo = "assets/images/Logo.png";
+
 
 
   static const String hadethBack = "assets/images/hadeth_back.png";
